@@ -1,0 +1,13 @@
+txt_name = "camvid_val_list.txt"
+file_dir = '/home/sundongwei/Documents/All_kind_Data/CamVid/val/'
+label_dir = '/home/sundongwei/Documents/All_kind_Data/CamVid/val_labels/'
+f = open(txt_name,'w')
+
+for root,dirs,files in os.walk(file_dir):
+    for file_signle in files:
+        train_result = 'val/' + file_signle
+        refile = file_signle[:-4]
+        label_result = 'val_labels/' + refile + '_L' +'.png' + '\n'
+        result = train_result + " " + label_result
+        f.write(result)
+f.close()
