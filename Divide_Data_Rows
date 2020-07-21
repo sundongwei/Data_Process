@@ -1,0 +1,9 @@
+with open(r'C:\Users\sundongwei\Desktop\pre.txt','r') as f:
+        lines = f.readlines()
+        for i in range(432):
+            want_n = i
+            start_row_num = 0 + 201 * (want_n)
+            end_row_num = 0 + 201 * (want_n + 1)
+            fw = open(r'C:\Users\sundongwei\Desktop\cdata\data-' + str(201*(want_n)) + '.txt','w')
+            for j in range(start_row_num, end_row_num):
+                fw.write(lines[j])
